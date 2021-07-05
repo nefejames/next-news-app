@@ -62,7 +62,12 @@ export const getServerSideProps = async (ctx) => {
   }
 
   const res = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=us&pageSize=5&page=${pageNumber}&apiKey=38d943f7806e41ecb882e03f5084e74e`
+    `https://newsapi.org/v2/top-headlines?country=us&pageSize=5&page=${pageNumber}`,
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.NEWS_API_KEY}`,
+      },
+    }
   );
 
   const data = await res.json();
