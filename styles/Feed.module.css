@@ -1,0 +1,43 @@
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.post {
+  width: 500px;
+  margin: 2rem;
+  border-bottom: 1px solid #212121;
+  position: relative;
+}
+
+.post img {
+  width: 100%;
+}
+
+.post h1 {
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.paginator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.paginator div {
+  margin: 2rem;
+}
+
+.paginator .active {
+  cursor: pointer;
+}
+
+.paginator .disabled {
+  cursor: not-allowed;
+  color: rgb(179, 179, 179);
+}
